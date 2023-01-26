@@ -9,6 +9,14 @@ Use below as package to install glogger in your Go project
 https://github.com/drj-sharma/url-shortner-go
 ```
 
+NOTE: Use your own MySQL config, update below values accordingly
+```
+Username = "root"
+Password = "12345678"
+Hostname = "127.0.0.1:3306"
+DBname   = "urlshortner"
+```
+
 
 CURL to get shortner url against given url
 provide url (full path url with http) to the url (param) It will return shortner url (e.g. localhost:8080/510e9896-19d) 
