@@ -17,6 +17,11 @@ Hostname = "127.0.0.1:3306"
 DBname   = "urlshortner"
 ```
 
+```
+Migration has already been done, you don't have to create table. It will automatically create the table using Migration.
+You only have to create database and update that database in Config Object -> /config/config.go
+```
+
 
 CURL to get shortner url against given url
 provide url (full path url with http) to the url (param) It will return shortner url (e.g. localhost:8080/510e9896-19d) 
