@@ -6,12 +6,12 @@ URL SHORTNER
 Use below as package to install glogger in your Go project
 
 ```
-github.com/drj-sharma/url-shortner
+https://github.com/drj-sharma/url-shortner-go
 ```
 
 
 CURL to get shortner url against given url
-provide url to the url (param) It will return shortner url (e.g. localhost:8080/510e9896-19d) 
+provide url (full path url with http) to the url (param) It will return shortner url (e.g. localhost:8080/510e9896-19d) 
 that will always redirect to original url (provided one)
 ```
 curl --location --request \
