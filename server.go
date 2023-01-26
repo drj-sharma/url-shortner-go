@@ -43,6 +43,7 @@ func main() {
 			)
 			return
 		}
+		// Redirect to the original mapped url
 		ctx.Redirect(http.StatusMovedPermanently, url.OriginalUrl)
 	})
 
@@ -60,18 +61,13 @@ func main() {
 			ctx.JSON(http.StatusInternalServerError, "/")
 		}
 		logger.Info("url: ", url)
+		// return shortenUrl
 		ctx.JSON(
 			http.StatusOK,
 			gin.H{
 				"shortenUrl": Host + result.ShortUrlCode,
 			},
 		)
-		// ctx.JSON(
-		// 	http.StatusOK,
-		// 	gin.H{
-		// 		"test": "test",
-		// 	},
-		// )
 	})
 	// Start serving the application
 	router.Run()
