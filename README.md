@@ -18,7 +18,8 @@ DBname   = "urlshortner"
 ```
 
 ```
-Migration has already been done, you don't have to create table. It will automatically create the table using Migration.
+Migration support has already been done in this project (whenever server starts), that means you don't have to create table. 
+It will automatically create the table using Migration.
 You only have to create database and update that database in Config Object -> /config/config.go
 ```
 
