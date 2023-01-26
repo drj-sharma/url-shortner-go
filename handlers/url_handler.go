@@ -24,6 +24,7 @@ type UrlHandler struct {
 	Payload UrlPayload
 }
 
+// get mapped url by using code of shortened url
 func (urlHandler *UrlHandler) GetOriginalUrlByCode(ctx context.Context) (entity.Url, error) {
 	code := urlHandler.Payload.Code
 	database := database.Database{}
@@ -40,6 +41,7 @@ func (urlHandler *UrlHandler) GetOriginalUrlByCode(ctx context.Context) (entity.
 	return result, nil
 }
 
+// save original url as well as new shortened url code in database
 func (urlHandler *UrlHandler) SaveUrlEntry(ctx context.Context) (entity.Url, error) {
 	uuid := u.UUID{}
 	code := uuid.GetCode()
